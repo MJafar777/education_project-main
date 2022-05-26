@@ -1,0 +1,243 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint==desktop {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint==toqqiz {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint==olti {
+    @media (max-width: 650px) {
+      @content;
+    }
+  }
+  @if $breakpoint==besh {
+    @media (max-width: 530px) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobile {
+    @media (max-width: 402px) {
+      @content;
+    }
+  }
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.808)),
+    url("../../Assets/images/header_bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  @include responsive(mobile) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.904), rgba(0, 0, 0, 0.89)),
+      url("../../Assets/images/header_bg.png");
+  }
+  &__nav {
+    width: 95%;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    @include responsive(toqqiz) {
+      padding: 2rem;
+    }
+    &--logo {
+      display: flex;
+      align-items: center;
+      img {
+        width: 40px;
+        height: 32px;
+        @include responsive(toqqiz) {
+          width: 30px;
+          height: 22px;
+        }
+        @include responsive(olti) {
+          width: 24px;
+          height: 16px;
+        }
+        @include responsive(besh) {
+          width: 30px;
+          height: 22px;
+        }
+        @include responsive(mobile) {
+          width: 26px;
+          height: 20px;
+        }
+      }
+      &--text {
+        margin-left: 0.6rem;
+        font-size: 24px;
+        text-align: center;
+        @include responsive(toqqiz) {
+          margin-left: 0.3rem;
+          font-size: 18px;
+        }
+        @include responsive(olti) {
+          margin-left: 0.1rem;
+          font-size: 13px;
+        }
+        @include responsive(besh) {
+          display: none;
+        }
+      }
+    }
+    &--links {
+      padding-top: 0.2rem;
+      @include responsive(toqqiz) {
+        padding-top: 0;
+      }
+      @include responsive(besh) {
+        display: none;
+      }
+      &--items {
+        display: flex;
+        align-items: center;
+      }
+      &--item {
+        margin-left: 2rem;
+        list-style: none;
+        @include responsive(toqqiz) {
+          margin-left: 1rem;
+        }
+        @include responsive(olti) {
+          margin-left: 0.5rem;
+        }
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 18px;
+          @include responsive(toqqiz) {
+            font-size: 14px;
+          }
+          @include responsive(olti) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  &__item {
+    margin-top: 13rem;
+    @include responsive(desktop) {
+      margin-top: 9rem;
+    }
+    @include responsive(olti) {
+      margin-top: 11rem;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &--title {
+      font-size: 72px;
+      margin-bottom: 2rem;
+      @include responsive(desktop) {
+        font-size: 56px;
+      }
+      @include responsive(toqqiz) {
+        font-size: 40px;
+      }
+      @include responsive(olti) {
+        font-size: 30px;
+      }
+      @include responsive(mobile) {
+        font-size: 24px;
+      }
+    }
+    &--parag {
+      font-size: 24px;
+      margin-bottom: 4rem;
+      @include responsive(desktop) {
+        font-size: 18px;
+      }
+      @include responsive(toqqiz) {
+        font-size: 14px;
+      }
+      @include responsive(olti) {
+        font-size: 12px;
+      }
+      @include responsive(mobile) {
+        font-size: 0.9rem;
+      }
+    }
+    &--button {
+      font-size: 24px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #27ae61;
+      width: 230px;
+      height: 70px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4rem;
+      @include responsive(desktop) {
+        width: 200px;
+        height: 55px;
+        font-size: 18px;
+      }
+      @include responsive(toqqiz) {
+        width: 160px;
+        height: 35px;
+        font-size: 14px;
+      }
+      @include responsive(olti) {
+        width: 130px;
+      }
+      @include responsive(mobile) {
+        width: 110px;
+        font-size: 11px;
+        height: 28px;
+      }
+    }
+  }
+}
+.open__btn {
+  display: none;
+  font-size: 3rem;
+  @include responsive(besh) {
+    display: flex;
+  }
+}
+.close__btn {
+  text-align: right;
+  padding: 2rem;
+}
+.modal {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.836);
+  color: #fff;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  &__links {
+    text-align: center;
+    &--items {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 10rem;
+    }
+    &--item {
+      list-style: none;
+      margin-bottom: 1.4rem;
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

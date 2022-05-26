@@ -1,0 +1,134 @@
+.blog-section {
+  text-align: center;
+  margin: 5rem 0;
+}
+.section-title {
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+}
+.blog-container {
+  width: 90%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.blog-content {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 0 2rem;
+  gap: 3rem;
+  width: 150%;
+  animation-name: carousel;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.14, 0.83, 0.21, 0.99);
+  @media (max-width: 850px) {
+    animation-name: carousel2;
+    width: 200%;
+  }
+  @media (max-width: 650px) {
+    animation-name: carousel3;
+    width: 300%;
+    animation-duration: 20s;
+  }
+  @media (max-width: 450px) {
+    animation-name: carousel3;
+    width: 600%;
+    animation-duration: 20s;
+    gap: 2rem;
+  }
+}
+.card-title {
+  padding: 0 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  @media (max-width: 1000px) {
+    padding: 0;
+  }
+}
+.card-desc {
+  font-size: 1.4rem;
+}
+.btn-blog {
+  color: white;
+  background-color: #27ae60;
+  padding: 1.8rem 4rem;
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 35px;
+}
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-17%);
+  }
+  50% {
+    transform: translateX(-34%);
+  }
+  75% {
+    transform: translateX(-17%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes carousel2 {
+  0% {
+    transform: translateX(0);
+  }
+  17% {
+    transform: translateX(-16.66%);
+  }
+  34% {
+    transform: translateX(-33.3%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  67% {
+    transform: translateX(-33.3%);
+  }
+  84% {
+    transform: translateX(-16.6%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes carousel3 {
+  0% {
+    transform: translateX(0);
+  }
+  12.5% {
+    transform: translateX(-16.6%);
+  }
+  25% {
+    transform: translateX(-33.3%);
+  }
+  37.5% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(-66.6%);
+  }
+  67.5% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-33.3%);
+  }
+  87.5% {
+    transform: translateX(-16.6%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.card-image {
+  width: 100%;
+}

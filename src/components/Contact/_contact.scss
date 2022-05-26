@@ -1,0 +1,237 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint==desktop {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint==toqqiz {
+    @media (max-width: 960px) {
+      @content;
+    }
+  }
+  @if $breakpoint==yetti {
+    @media (max-width: 700px) {
+      @content;
+    }
+  }
+  @if $breakpoint==besh {
+    @media (max-width: 530px) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobile {
+    @media (max-width: 402px) {
+      @content;
+    }
+  }
+  @if $breakpoint==uch {
+    @media (max-width: 340px) {
+      @content;
+    }
+  }
+}
+.contact-us {
+  width: 100%;
+  // @include responsive(toqqiz) {
+  //   max-width: 96rem;
+  // }
+}
+.section-sub {
+  // @include responsive(toqqiz) {
+  //   max-width: 96rem;
+  // }
+  // background-color: black;
+  background-image: url("../../Assets/images/signUp.png");
+  width: 100%;
+  background-size: cover;
+
+  height: 20rem;
+  display: flex;
+  @include responsive(mobile) {
+    height: 40rem;
+  }
+  align-items: center;
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    @include responsive(mobile) {
+      align-items: center;
+      text-align: center;
+      gap: 3rem;
+    }
+
+    @include responsive(besh) {
+      flex-direction: column;
+      gap: 3rem;
+      justify-content: center;
+    }
+    font-size: 2.5rem;
+
+    &-form {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      @include responsive(mobile) {
+        gap: 3rem;
+      }
+      @include responsive(mobile) {
+        flex-direction: column;
+      }
+      &__input {
+        @include responsive(besh) {
+          width: 240px;
+        }
+        @include responsive(mobile) {
+          width: 110%;
+        }
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #95989a;
+        width: 200px;
+        font-size: 1.5rem;
+        color: white;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+.btn-primary {
+  background-color: #27ae60;
+  font-size: 2rem;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+// 36 24
+.contact-section {
+  margin: 6.6rem auto;
+  margin-bottom: 2rem;
+  @include responsive(uch) {
+    margin-top: 3.6rem;
+    margin-bottom: 2rem;
+  }
+}
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  margin: 6.6rem auto;
+  gap: 3rem;
+  @include responsive(yetti) {
+    grid-template-columns: 1fr;
+  }
+  @include responsive(uch) {
+    width: 95%;
+    height: 17rem;
+  }
+}
+.send__form {
+  @include responsive(uch) {
+    width: 100%;
+  }
+  @include responsive(yetti) {
+    grid-row: 2/3;
+  }
+  @include responsive(uch) {
+    width: 100%;
+  }
+  display: flex;
+  flex-direction: column;
+  // width: 57rem;
+  height: 48rem;
+  gap: 3rem;
+  &--btn {
+    width: 20rem;
+  }
+  &--input,
+  &--area {
+    width: 100%;
+    border: none;
+    border-bottom: 0.1rem solid #95989a;
+    outline: none;
+    padding: 1.4rem;
+    ::placeholder {
+      font-size: 1.8rem;
+    }
+  }
+  &--area {
+    border: 0.1rem solid #95989a;
+    height: 24rem;
+  }
+}
+.heading-secondary {
+  text-align: center;
+  font-size: 4.8rem;
+  @include responsive(uch) {
+    font-size: 3rem;
+  }
+}
+.map {
+  width: 100%;
+  @include responsive(toqqiz) {
+    // max-width: 50rem;
+  }
+  @include responsive(yetti) {
+    grid-row: 1/2;
+  }
+  @include responsive(uch) {
+    width: 100%;
+  }
+}
+.connection {
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+  font-size: 1.8rem;
+  @include responsive(toqqiz) {
+    flex-direction: column;
+    width: 30rem;
+    font-size: 1rem;
+  }
+  @include responsive(uch) {
+    font-size: 0.8rem;
+  }
+
+  &-icon {
+    width: 3rem;
+    // height: 2rem;
+  }
+}
+.adress {
+  width: 17rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  @include responsive(toqqiz) {
+    flex-direction: row;
+    width: 30rem;
+    font-size: 1rem;
+  }
+}
+.google-map {
+  padding-bottom: 3rem;
+  width: 100%;
+  iframe {
+    width: 100%;
+    border: 0;
+    @include responsive(toqqiz) {
+      max-width: 50rem;
+    }
+    @include responsive(uch) {
+      width: 100%;
+      height: 17rem;
+    }
+  }
+}

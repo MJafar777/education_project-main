@@ -1,0 +1,321 @@
+.teachers {
+  width: 100%;
+  height: 66.4rem;
+  display: block;
+  margin: 0 auto;
+  background-color: #f1f1f1;
+  .teachers__title {
+    text-align: center;
+    padding-top: 6.7rem;
+    font-size: 4.8rem;
+  }
+  .teachers__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2rem 0;
+  }
+
+  .teacherTitle {
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+  }
+  .teacherTitle:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+    cursor: pointer;
+  }
+  .teacherTitle__imgTeacher--img {
+    width: 9.6rem;
+    height: 9.6rem;
+  }
+  .teacherTitle__teacher--name {
+    font-size: 3rem;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  .teacherTitle__teacher--status {
+    font-size: 2.4rem;
+    color: #27ae60;
+    margin-left: 4rem;
+    font-weight: bold;
+  }
+}
+// @media (max-width: 1610px) {
+
+// }
+@media only screen and (max-width: 1553px) {
+  .teachers {
+    .teacherTitle__imgTeacher--img {
+      width: 9.4rem;
+      height: 9.4rem;
+    }
+    .teacherTitle__teacher--name {
+      font-size: 2.5rem;
+      margin-left: 3.6rem;
+      margin-bottom: 0.8rem;
+    }
+    .teacherTitle__teacher--status {
+      font-size: 2.2rem;
+      margin-left: 3.8rem;
+    }
+  }
+}
+@media only screen and (max-width: 1436px) {
+  .teachers {
+    .teacherTitle__imgTeacher--img {
+      width: 9.3rem;
+      height: 9.3rem;
+    }
+    .teacherTitle__teacher--name {
+      font-size: 2.3rem;
+      margin-left: 3.3rem;
+      margin-bottom: 0.7rem;
+    }
+    .teacherTitle__teacher--status {
+      font-size: 2rem;
+      margin-left: 3.6rem;
+    }
+  }
+}
+@media only screen and (max-width: 1358px) {
+  .teachers {
+    .teacherTitle__imgTeacher--img {
+      width: 9rem;
+      height: 9rem;
+    }
+    .teacherTitle__teacher--name {
+      font-size: 2.1rem;
+      margin-left: 3.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .teacherTitle__teacher--status {
+      font-size: 1.8rem;
+      margin-left: 3.4rem;
+    }
+  }
+}
+@media only screen and (max-width: 1358px) {
+  .teachers {
+    .teacherTitle__imgTeacher--img {
+      width: 8.6rem;
+      height: 8.6rem;
+    }
+    .teacherTitle__teacher--name {
+      font-size: 1.9rem;
+      margin-left: 2.9rem;
+      margin-bottom: 0.3rem;
+    }
+    .teacherTitle__teacher--status {
+      font-size: 1.5rem;
+      margin-left: 3.1rem;
+    }
+  }
+}
+@media only screen and (max-width: 1162px) {
+  .teachers {
+    height: 62rem;
+    .teachers__title {
+      font-size: 4rem;
+    }
+    .teacherTitle__imgTeacher--img {
+      width: 8.4rem;
+      height: 8.4rem;
+    }
+    .teacherTitle__teacher--name {
+      font-size: 1.7rem;
+      margin-left: 2.7rem;
+      margin-bottom: 0.3rem;
+    }
+    .teacherTitle__teacher--status {
+      font-size: 1.3rem;
+      margin-left: 2.8rem;
+    }
+  }
+}
+@media only screen and (max-width: 1078px) {
+  .teachers {
+    height: 60rem;
+    .teachers__title {
+      font-size: 3.6rem;
+    }
+    .teacherTitle__imgTeacher--img {
+      width: 8rem;
+      height: 8rem;
+    }
+    .teacherTitle__teacher--name {
+      font-size: 1.3rem;
+      margin-left: 2.3rem;
+      margin-bottom: 0.3rem;
+    }
+    .teacherTitle__teacher--status {
+      font-size: 1rem;
+      margin-left: 2.2rem;
+    }
+  }
+}
+@media only screen and (max-width: 957px) {
+  .teachers {
+    height: 85rem;
+    .teachers__title {
+      font-size: 3.3rem;
+    }
+    .teachers__main {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    .teacherTitle__imgTeacher--img {
+      width: 9rem;
+      height: 9rem;
+    }
+    .teacherTitle__teacher--name {
+      font-size: 2rem;
+      margin-left: 3.2rem;
+      margin-bottom: 0.8rem;
+    }
+    .teacherTitle__teacher--status {
+      font-size: 1.8rem;
+      margin-left: 3.5rem;
+    }
+  }
+}
+@media only screen and (max-width: 888px) {
+  .teachers {
+    height: 84rem;
+    .teachers__title {
+      font-size: 3.2rem;
+    }
+    .teacherTitle__imgTeacher--img {
+      width: 8.8rem;
+      height: 8.8rem;
+    }
+    .teacherTitle__teacher--name {
+      font-size: 1.8rem;
+      margin-left: 3rem;
+      margin-bottom: 0.8rem;
+    }
+    .teacherTitle__teacher--status {
+      font-size: 1.6rem;
+      margin-left: 3.3rem;
+    }
+  }
+}
+@media only screen and (max-width: 821px) {
+  .teachers {
+    height: 83rem;
+    .teachers__title {
+      font-size: 3.2rem;
+    }
+    .teacherTitle__imgTeacher--img {
+      width: 8.5rem;
+      height: 8.5rem;
+    }
+    .teacherTitle__teacher--name {
+      font-size: 1.5rem;
+      margin-left: 2.8rem;
+      margin-bottom: 0.8rem;
+    }
+    .teacherTitle__teacher--status {
+      font-size: 1.5rem;
+      margin-left: 3.3rem;
+    }
+  }
+}
+@media only screen and (max-width: 804px) {
+  .teachers {
+    height: 110rem;
+    .teachers__title {
+      font-size: 3.2rem;
+    }
+    .teacherTitle {
+      display: block;
+      text-align: center;
+    }
+    .teacherTitle__imgTeacher--img {
+      width: 9rem;
+      height: 9rem;
+      display: block;
+      margin: 0 auto;
+    }
+    .teacherTitle__teacher--name {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      margin-bottom: 0.8rem;
+    }
+    .teacherTitle__teacher--status {
+      font-size: 1.5rem;
+      margin-left: 1.8rem;
+    }
+  }
+}
+@media only screen and (max-width: 562px) {
+  .teachers {
+    height: 120rem;
+    .teachers__title {
+      font-size: 3.2rem;
+    }
+    .teacherTitle {
+      width: 93%;
+      display: block;
+      text-align: center;
+    }
+
+    .teacherTitle__imgTeacher--img {
+      width: 9rem;
+      height: 9rem;
+      display: block;
+      margin: 0 auto;
+    }
+    .teacherTitle__teacher--name {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      margin-bottom: 0.8rem;
+    }
+    .teacherTitle__teacher--status {
+      font-size: 1.5rem;
+      margin-left: 1.8rem;
+    }
+  }
+}
+@media only screen and (max-width: 562px) {
+  .teachers {
+    height: 190rem;
+    .teachers__title {
+      font-size: 3.2rem;
+    }
+    .teacherTitle {
+      width: 90%;
+      text-align: center;
+    }
+
+    .teachers__main {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+    .teacherTitle__imgTeacher--img {
+      width: 9rem;
+      height: 9rem;
+      display: block;
+      margin: 0 auto;
+    }
+    .teacherTitle__imgTeacher {
+      // margin-left: -10rem;
+    }
+    .teacherTitle__teacher--name {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      // margin-left: -10rem;
+      margin-bottom: 0.8rem;
+    }
+    .teacherTitle__teacher--status {
+      font-size: 1.5rem;
+      // margin-left: -10rem;
+    }
+  }
+}

@@ -1,0 +1,161 @@
+//  Feauters section
+
+.feauters {
+  width: 100%;
+  padding: 2rem 0;
+  // height: 100%;
+  background-color: #f0f0f0;
+  font-family: sans-serif;
+  font-size: 16px;
+
+  // title lardagi font sizelar
+  h2 {
+    padding: 2rem;
+    font-size: 36px;
+  }
+
+  // p description
+
+  h2,
+  p {
+    text-align: center;
+  }
+
+  // p description
+  p {
+    padding: 0 2.5rem;
+    line-height: 2.3rem;
+  }
+
+  // umumiy cardlar yani barcha cardlarni to'plab turgan div
+  &__cards {
+    width: 80%;
+    height: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    // cardning title . {Online testing}
+    &--card--title {
+      color: #000;
+      font-size: 24px;
+      font-weight: 550;
+      margin: 18.2px auto;
+    }
+
+    // cards divi ichidagi card . Bu carddan 6 ta bor
+    &--card {
+      margin: 10px auto;
+
+      // cardlardagi rasmlar
+      .feauters__card--card--picture {
+        width: 150px;
+        height: 150px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin: auto;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    // Card descriptoinini
+    &--card--description {
+      width: 100%;
+      p {
+        color: #666;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  // Barcha 6 ta cardlar ro'yhati
+  .card1 {
+    .feauters__card--card--picture {
+      background-image: url(../../Assets/images/feature1.png);
+    }
+  }
+  .card2 {
+    .feauters__card--card--picture {
+      background-image: url(../../Assets/images/feature2.png);
+    }
+  }
+  .card3 {
+    .feauters__card--card--picture {
+      background-image: url(../../Assets/images/feature3.png);
+    }
+  }
+  .card4 {
+    .feauters__card--card--picture {
+      background-image: url(../../Assets/images/feature4.png);
+    }
+  }
+  .card5 {
+    .feauters__card--card--picture {
+      background-image: url(../../Assets/images/feature5.png);
+    }
+  }
+  .card6 {
+    .feauters__card--card--picture {
+      background-image: url(../../Assets/images/feature6.png);
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  p {
+    padding: 0 1rem;
+    line-height: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .feauters {
+    font-size: 14px;
+
+    // cardlar joylashuvi
+    &__cards {
+      grid-template-columns: auto auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .feauters {
+    // cardlar joylashuvi
+    &__cards {
+      grid-template-columns: auto auto;
+    }
+
+    h2 {
+      padding: 1.5rem;
+      font-size: 34px;
+    }
+
+    p {
+      padding: 0 1.5rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .feauters {
+    &__cards {
+      grid-template-columns: auto;
+    }
+
+    h2 {
+      padding: 1rem;
+      font-size: 32px;
+    }
+
+    p {
+      padding: 0rem;
+      line-height: 2rem;
+      width: 100%;
+    }
+  }
+}

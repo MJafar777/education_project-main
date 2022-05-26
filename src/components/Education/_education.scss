@@ -1,0 +1,294 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint==desktop {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint==toqqiz {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint==olti {
+    @media (max-width: 650px) {
+      @content;
+    }
+  }
+  @if $breakpoint==besh {
+    @media (max-width: 530px) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobile {
+    @media (max-width: 402px) {
+      @content;
+    }
+  }
+}
+.education {
+  width: 100%;
+  height: 56.9rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 2rem 13.6rem;
+  margin: 4rem 0 6rem 0;
+  gap: 8rem;
+  &__left {
+    &--img {
+      height: 56.9rem;
+      width: 56.9rem;
+      object-fit: cover;
+    }
+  }
+  &__right {
+    // width: 45%;
+
+    &--heading {
+      font-size: 3.6rem;
+      font-weight: bold;
+    }
+
+    &--loremText {
+      font-size: 1.8rem;
+      line-height: 4.2rem;
+      padding: 2.5rem 0;
+    }
+
+    &--item {
+      display: flex;
+      gap: 5rem;
+      align-items: center;
+      margin: 3rem 0;
+
+      &--text {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 4.2rem;
+      }
+
+      &--img {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+}
+
+// Responsive disign
+
+@media (max-width: 135rem) {
+  .education {
+    gap: 6rem;
+    &__ {
+      &--img {
+        height: 40rem;
+        width: 40rem;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .education__right--item--text {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 129rem) {
+  .education {
+    gap: 4rem;
+    &__ {
+      &--img {
+        height: 35rem;
+        width: 35rem;
+        object-fit: cover;
+      }
+    }
+  }
+  .education__right--heading {
+    font-size: 3rem;
+  }
+  .education__right--loremText {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    padding: 1.8rem 0;
+  }
+  .education__right--item--text {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width: 110rem) {
+  .education {
+    display: grid;
+    // grid-template-columns: 1fr;
+    padding: 0 8rem;
+    &__left {
+      &--img {
+        height: 45.9rem;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &__right {
+      &--heading {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      &--loremText {
+        font-size: 1.6rem;
+        line-height: 4.2rem;
+        padding: 0.5rem 0;
+      }
+
+      &--item {
+        display: flex;
+        gap: 5rem;
+        align-items: center;
+        margin: 1rem 0;
+
+        &--text {
+          font-size: 2rem;
+          font-weight: bold;
+          line-height: 4.2rem;
+        }
+
+        &--img {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 100rem) {
+  .education {
+    display: grid;
+    // grid-template-columns: 1fr;
+    padding: 0 5rem;
+    &__left {
+      &--img {
+        height: 40.9rem;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &__right {
+      &--heading {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      &--loremText {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        padding: 0.5rem 0;
+      }
+
+      &--item {
+        display: flex;
+        gap: 5rem;
+        align-items: center;
+        margin: 1rem 0;
+
+        &--text {
+          font-size: 1.7rem;
+          font-weight: bold;
+          line-height: 3.2rem;
+        }
+
+        &--img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 60rem) {
+  .education {
+    display: grid;
+    // grid-template-columns: 1fr;
+    padding: 0 3rem;
+    margin-bottom: 18rem;
+    &__left {
+      &--img {
+        height: 30.9rem;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &__right {
+      &--heading {
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+
+      &--loremText {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        padding: 0.5rem 0;
+      }
+
+      &--item {
+        display: flex;
+        gap: 5rem;
+        align-items: center;
+        margin: 1rem 0;
+
+        &--text {
+          font-size: 1rem;
+          font-weight: bold;
+          line-height: 2.2rem;
+        }
+
+        &--img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 32rem) {
+  .education {
+    padding: 0 2rem;
+    grid-template-columns: 1fr;
+    &__ {
+      &--img {
+        height: 28rem;
+        width: 28rem;
+        object-fit: cover;
+      }
+    }
+    &__right {
+      // width: 45%;
+
+      &--heading {
+        font-size: 3rem;
+      }
+
+      &--loremText {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        padding: 2.5rem 0;
+      }
+
+      &--item {
+        margin: 1.6rem 0;
+        gap: 3rem;
+
+        &--text {
+          font-size: 1.8rem;
+          font-weight: bold;
+          line-height: 2.4rem;
+        }
+      }
+    }
+  }
+}
